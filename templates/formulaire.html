@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  rel = "stylesheet"  href = "{{ url_for('static', filename= 'css/styleformulaire.css') }}">
+</head>
+<body>
+    <h1>Promesse de don</h1>
+    <form  method="post">
+       
+        <label class = "label" for="nom">Nom :</label>
+        <input type="text" id="nom" required name ="user_nom" value="{{ request.form['user_nom']}}">
+    
+        
+        
+        <label class = "label" for="prenom"> Prenom :</label>
+        <input type="text" required id="prenom" name ="user_prenom" value="{{request.form[user_prenom]}}">
+    
+    
+        <label class = "label" for="mail">Mail :</label>
+        <input type="email" required id="mail" name ="user_mail" value="{{request.form[user_mail]}}">
+    
+    
+        <label class = "label" for="montant">Montant :</label>
+        <input type="number" min="0" required id="montant" name ="user_montant" value="{{request.form[user_montant]}}">
+    
+        <br>
+        <label class = "label" for="message">Message :</label>
+        <input type="text" id="msg"  name ="user_message" placeholder="Optionnel"  value="{{request.form[user_message]}}"></textarea>
+    
+        <br>
+        
+        <input type="checkbox"  id ="checkbox" required  checked="checked" >
+        <label for="checkbox" >J'ai pris connaissance des règles et conditions </label>
+        
+    
+        <button type="submit" id="button">Enregistrer</button>
+    
+
+        </form>
+    
+</body>
+</html>

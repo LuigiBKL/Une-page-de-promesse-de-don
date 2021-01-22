@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>Tous ensemble</h1>
+    <h2>Association France Cancer - Finistère </h2>
+    <h3>Association bénévoles basée à BREST (29)</h3>
+    <img src = "{{ url_for('static', filename= 'images/Capture.png') }}" alt="html5"/>
+    <p>Créée en 1985, à l’initiative de familles de personnes malades et de professionnels du secteur sanitaire et social, France Cancer est aujourd’hui la seule association nationale reconnue d’utilité publique dans le domaine de la maladie du cancer et des maladies apparentées, maladies qui touchent plus d’un million de personnes en France. Pour répondre aux besoins et attentes des familles frappées par la maladie, comme pour toujours mieux informer et sensibiliser l’opinion publique, elle s’appuie sur un réseau de plus de 100 associations départementales et plus de 200 antennes de proximité animées par plusieurs milliers de bénévoles. 
+        Elle peut également compter sur l’engagement de 150 000 adhérents et donateurs. Plus de 80% du budget France Cancer provient de la générosité du public.</p>
+    <form action ="{{url_for('formulaire')}}">
+        <button id="promessedon">Faire une promesse de don</button>
+    </form> 
+    <form action ="{{url_for('resultat')}}">
+        <button id="listedonnateurs">Voir la liste de donnateurs</button>
+    </form> 
+</body>
+</html>

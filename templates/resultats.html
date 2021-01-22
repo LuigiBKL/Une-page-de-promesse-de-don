@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Liste des donnateurs</h2>
+    {% for i in resultats %}
+    <p>-----------------------------------------------------</p>
+    <h5 class="card-title">{{ i["nom"] }} {{ i["prenom"] }}</h5>
+    <p class="card-text">{{ i["mail"]}}</p>
+    <p class="card-text">{{ i["montant"]}} €</p>
+    <p class="card-text">{{ i["message"]}} </p>
+    <a href="https://www.google.com/intl/fr/gmail/about/" class="btn btn-primary">Contacter</a>
+ 
+    {% endfor %}
+
+    <h3>Total récoltés {{total}} euros </h3>
+    
+
+</body>
+</html>
